@@ -7,6 +7,9 @@ def main():
     dataset_filename = input("Please enter the dataset filename: ")
     data, labels = load_data(dataset_filename)
 
+    num_instances, num_features = data.shape
+    print(f"\nThis dataset has {num_features} features (not including the class attribute), with {num_instances} instances.\n")
+
     print("Type the number of the algorithm you want to run.")
     print("1. Forward Selection")
     print("2. Backward Elimination")
